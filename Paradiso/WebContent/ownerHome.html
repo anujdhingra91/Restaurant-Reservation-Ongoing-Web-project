@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Paradiso - Eat In Paradise</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-glass" aria="true">  </span>Paradiso
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link1</a>
+                    </li>
+                    <li> <button type="button" class="btn btn-primary btn-lg">
+                        Logout
+                    </button>
+                    </li>
+                </ul>
+
+
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container" id="ownerHome">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a href="#tab-reservation" data-toggle="tab">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <span class="tab-text">Reservations</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-seating" data-toggle="tab">
+                    <span class="glyphicon glyphicon-th"></span>
+                    <span class="tab-text">Seating</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-profile" data-toggle="tab">
+                    <span class="glyphicon glyphicon-list"></span>
+                    <span class="tab-text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-settings" data-toggle="tab">
+                    <span class="glyphicon glyphicon-cog"></span>
+                    <span class="tab-text">App Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#tab-contacts" data-toggle="tab">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="tab-text">Contacts</span>
+                </a>
+            </li>
+        </ul>
+        <div id="content" class="tab-content">
+            <div class="tab-pane active" id="tab-reservation">
+                <h6>Reservation List</h6>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Reservation" id="inputSearch">
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul class="pagination pull-right">
+                    <li><a href="#">&laquo;</a>
+                    </li>
+                    <li class="active"><a href="#">1</a>
+                    </li>
+                    <li><a href="#">2</a>
+                    </li>
+                    <li><a href="#">3</a>
+                    </li>
+                    <li><a href="#">4</a>
+                    </li>
+                    <li><a href="#">5</a>
+                    </li>
+                    <li><a href="#">&raquo;</a>
+                    </li>
+                </ul>
+                <table id="table" class="table table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>CNF#</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>#</th>
+                        <th>Action</th>
+                        <th>Edit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DA83CD</td>
+                        <td>Anuj Dhingra</td>
+                        <td>05/10/2014 1:30PM</td>
+                        <td>4</td>
+                        <td>
+                            <button class="btn btn-primary" title="Open Details">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal">Details</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" title="Edit Reservation">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="btn-text" data-toggle="modal" data-target="#myModal2">Edit</span>
+                            </button>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="tab-seating">
+                <h6>Seating Area</h6>
+                <div class="container seatingContainer">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Table#</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th>Since</th>
+                                <th>CNF#</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Occupied</td>
+                                <td>1:30PM</td>
+                                <td>
+                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">DA83CD</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Available</td>
+                                <td>-</td>
+                                <td>
+                                    <span class="btn-filler"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-profile">
+
+                <h6>Restaurant Details</h6>
+                <form role="form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="restaurantName">Name</label>
+                                <input type="text" id="restaurantName" class="form-control restaurantInfo" value="Paradiso" disabled>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="restaurantContact">Contact</label>
+                                <input type="tel" class="form-control restaurantInfo" id="restaurantContact"  value="352-328-5415" disabled>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="restaurantEmail">Email</label>
+                        <input type="email" class="form-control restaurantInfo" id="restaurantEmail"  value="customerService@paradiso.com" disabled>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="restaurantAddress">Address</label>
+                        <input type="text" class="form-control restaurantInfo" id="restaurantAddress"  value="4000 South West 37th Blvd, Gainesville, FL 32608" disabled>
+
+                    </div>
+
+                    <div class="text-center">
+                        <button type="button" id="clicker" class="btn large-btn btn-primary">edit</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="tab-pane" id="tab-settings">
+                <h6>Restaurant Settings</h6>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <!-- <tr>
+                             <th>Day</th>
+                             <th>Time</th>
+                         </tr>-->
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>11:00 AM - 10:00 PM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>11:00 AM - 10:00 PM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>11:00 AM - 10:00 PM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>11:00 AM - 10:00 PM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>11:00 AM - 02:00 AM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>11:00 AM - 02:00 AM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>11:00 AM - 10:00 PM</td>
+
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+
+                        <tr>
+                            <td>AutoAssign Tables</td>
+                            <td> True</td>
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-contacts">
+
+                <h6>Customer Information</h6>
+                <div class="table-responsive">
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+
+
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+
+
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+
+
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Anuj Dhingra</td>
+
+
+                            <td>
+                                <button class="btn btn-primary" title="Open Details">
+                                    <span class="glyphicon glyphicon-share"></span>
+                                    <span class="btn-text" data-toggle="modal" data-target="#customerDetails">Details</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <ul class="pagination pull-right">
+                        <li><a href="#">&laquo;</a>
+                        </li>
+                        <li class="active"><a href="#">1</a>
+                        </li>
+                        <li><a href="#">2</a>
+                        </li>
+                        <li><a href="#">3</a>
+                        </li>
+                        <li><a href="#">4</a>
+                        </li>
+                        <li><a href="#">5</a>
+                        </li>
+                        <li><a href="#">&raquo;</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <article>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Reservation Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tab-pane">
+
+                            <dl class="dl-horizontal reservationDetails">
+                                <dt>Name</dt>
+                                <dd>Anuj Dhingra</dd>
+                                <dt>Phone</dt>
+                                <dd>352-328-5415</dd>
+                                <dt>Email</dt>
+                                <dd>dhingraanuj91@gmail.com</dd>
+                                <dt>Status</dt>
+                                <dd>Reserved</dd>
+                                <dt>Table Number</dt>
+                                <dd>1</dd>
+                                <dt>Reserved On</dt>
+                                <dd>05/08/2014</dd>
+                                <dt>Reserved For</dt>
+                                <dd>05/10/2014 1:30 PM</dd>
+                                <dt>Party Size/Capacity</dt>
+                                <dd>4/4</dd>
+                                <dt>Conf Number</dt>
+                                <dd>DA83CD</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>-->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Reservation Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container tab-content">
+                            <div class="tab-pane active" id="tab-guest">
+                                <h6>Make a Reservation</h6>
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="reserveDate">Date</label>
+                                                <input type="date" class="form-control" id="reserveDate" placeholder="MM/DD/YYYY" value="2014-05-10">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="reserveTime">Time</label>
+                                                <input type="time" class="form-control" id="reserveTime" placeholder="HH:MM"  value="01:30">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reserveName">Name</label>
+                                        <input type="text" class="form-control" id="reserveName" placeholder="Enter Your Name"  value="Anuj Dhingra">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="reservePhone">Phone</label>
+                                        <input type="tel" class="form-control" id="reservePhone" placeholder="Enter Your Phone"  value="352-328-5415">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reserveEmail">Email</label>
+                                        <input type="email" class="form-control" id="reserveEmail" placeholder="example@domain.com" value="dhingraanuj91@gmail.com">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label for="reserveSize">Party Size</label>
+                                                <input type="number" class="form-control" id="reserveSize" placeholder="# Guests"  value="4">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="form-group">
+                                                <label for="reserveSpecial">Special Need</label>
+                                                <input type="email" class="form-control" id="reserveSpecial" placeholder="e.g. Birthday, Anniversary etc."  value="none">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" onclick="showConfirmation()" class="btn large-btn btn-primary">Reserve</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>-->
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input class="form-control " type="text" placeholder="Monday">
+                        </div>
+                        <div class="form-group">
+
+                            <input class="form-control " type="text" placeholder="11:00 AM - 10:00 PM">
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    </article>
+    <article>
+        <div class="modal fade" id="customerDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Customer Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tab-pane">
+                            <h6>Anuj Dhingra</h6>
+                            <dl class="dl-horizontal reservationDetails">
+                                <dt>Status</dt>
+                                <dd>Elite Member</dd>
+                                <dt>Phone</dt>
+                                <dd>352-328-5415</dd>
+                                <dt>Email</dt>
+                                <dd>dhingraanuj91@gmail.com</dd>
+                                <dt># Visited</dt>
+                                <dd>124</dd>
+                                <dt>Fav Table</dt>
+                                <dd>7</dd>
+                                <dt>Total Reservations</dt>
+                                <dd>130</dd>
+                                <dt>Additional info</dt>
+                                <dd>...</dd>
+                                <dt>Additional info</dt>
+                                <dd>...</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>-->
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<footer></footer>
+
+<!-- JavaScripts libraries-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

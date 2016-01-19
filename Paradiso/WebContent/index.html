@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Paradiso - Eat in Paradise</title>
+<!--<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-theme.min.css">
+<link
+	href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic"
+	rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"> <span
+						class="glyphicon glyphicon-glass" aria="true"> </span>Paradiso
+					</a>
+				</div>
+
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+
+
+					<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">About <span
+									class="sr-only">(current)</span></a></li>
+							<li><a href="javascript: void(0)" onclick="showForm()">Make
+									a Reservation</a></li>
+							<!--<div id="getstarted"><a id="contactBtn" class="active" href="javascript: void(0)" onclick="showForm()">Get Started</a></div>-->
+							<li>
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-primary btn-lg"
+									data-toggle="modal" data-target="#myModal">Owner LogIn
+								</button>
+							</li>
+						</ul>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Owner LogIn</h4>
+					</div>
+					<div class="modal-body">
+						<div class="tab-pane" id="tab-owner">
+							<h6>Login</h6>
+							<form role="form">
+								<div class="form-group">
+									<label for="email">Email address</label> <input type="email"
+										class="form-control" id="email"
+										placeholder="example@domain.com">
+								</div>
+								<div class="form-group">
+									<label for="password">Password</label> <input type="password"
+										class="form-control" id="password" placeholder="Password">
+								</div>
+								<div class="text-center">
+									<button type="submit" class="btn large-btn btn-primary">Submit</button>
+									<button type="button" class="btn btn-link">Forgot
+										Password?</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">Save changes</button>
+                 </div>-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<article>
+			<div class="paddRow contactRow">
+				<div class="container tab-content">
+					<div class="tab-pane active" id="tab-guest">
+						<h6>Make a Reservation</h6>
+						<form role="form">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="reserveDate">Date</label> <input type="date"
+											class="form-control" id="reserveDate"
+											placeholder="YYYY/MM/DD">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="reserveTime">Time</label> <input type="time"
+											class="form-control" id="reserveTime" placeholder="HH:MM">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="reserveFirstName">First Name</label> <input
+											type="text" class="form-control" id="reserveFirstName"
+											placeholder="First Name">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="reserveLastName">Last Name</label> <input
+											type="text" class="form-control" id="reserveLastName"
+											placeholder="Last Name">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="reservePhone">Phone</label> <input type="tel"
+									class="form-control" id="reservePhone"
+									placeholder="Enter Your Phone">
+							</div>
+							<div class="form-group">
+								<label for="reserveEmail">Email</label> <input type="email"
+									class="form-control" id="reserveEmail"
+									placeholder="example@domain.com">
+							</div>
+
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="reserveSize">Party Size</label> <input
+											type="number" class="form-control" id="reserveSize"
+											placeholder="# Guests">
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<div class="form-group">
+										<label for="reserveSpecial">Special Need</label> <input
+											type="email" class="form-control" id="reserveSpecial"
+											placeholder="e.g. Birthday, Anniversary etc.">
+									</div>
+								</div>
+							</div>
+							<div class="text-center">
+								<button type="button" onclick="showConfirmation()"
+									class="btn large-btn btn-primary">Reserve</button>
+								<button type="button" onclick="changeConfirmation()"
+									class="btn btn-link">Change Existing Reservation?</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article>
+			<div class="paddRow confirmationWindow">
+				<div class="container tab-content">
+					<div class="tab-pane active">
+
+
+						<div class="text-center">
+							<h3>Reservation Confirmed</h3>
+							<h6>Your Reservation Token Is sdu3$i7236ASd</h6>
+						</div>
+						<div class="text-center">
+							<button type="button" onclick="clearAll()"
+								class="btn large-btn btn-primary">Cool, Thanks!</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</article>
+		<article>
+			<div class="paddRow changeConfirmation">
+				<div class="container tab-content">
+					<div class="tab-pane active">
+
+						<form>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="reserveDate">Date</label> <input type="date"
+											class="form-control" placeholder="MM/DD/YYYY">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="reserveTime">Time</label> <input type="time"
+											class="form-control" placeholder="HH:MM">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="reserveName">Name</label> <input type="text"
+									class="form-control" placeholder="Enter Your Name">
+							</div>
+
+							<div class="form-group">
+								<label for="reservePhone">Phone</label> <input type="tel"
+									class="form-control" placeholder="Enter Your Phone">
+							</div>
+							<div class="form-group">
+								<label for="reserveEmail">Enter Your Reservation Token</label> <input
+									type="text" class="form-control">
+							</div>
+							<div class="text-center">
+								<button type="button" onclick="showConfirmation()"
+									class="btn large-btn btn-primary">Change Confirmation</button>
+								<button type="button" onclick="clearAll()" class="btn btn-link">Cancel</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</article>
+	</section>
+
+
+	<section>
+		<img src="Images/paradiso_maledive_sfondi_wide-1680x1050.jpg"
+			class="img-responsive" alt="Responsive image">
+	</section>
+
+
+
+	<footer>
+
+		<!--     <div class="container">
+             <div id="footer-widgets">
+                 <ul>
+
+                 <li><h4>Hours</h4>
+                     <div class="textwidget"><table width="234" border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Monday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">11:00 am ? 10:00 pm</td>
+                     </tr>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Tuesday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">11:00 am ? 10:00 pm</td>
+                     </tr>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Wednesday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">11:00 am ? 10:00 pm</td>
+                     </tr>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Thursday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">11:00 am ? 10:00 pm</td>
+                     </tr>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Friday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">11:00 am ? 11:00 pm</td>
+                     </tr>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Saturday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">11:00 am ? 11:00 pm</td>
+                     </tr>
+                     <tr>
+                         <td valign="bottom" nowrap="nowrap" width="89">Sunday:</td>
+                         <td valign="bottom" nowrap="nowrap" width="145">12:00 pm ? 10:00 pm</td>
+                     </tr>
+                     </tbody>
+                 </table>
+                         </div>
+ </li>
+
+                     <li><h4>Follow Us</h4><a target="_blank" title="facebook" href="#"><img src="http://pizzaparadisoorlando.com/wp-content/uploads/1368459524_facebook.png" border="0" width="32" height="32" alt="facebook"></a><a target="_blank" title="youtube" href="#"><img src="http://pizzaparadisoorlando.com/wp-content/uploads/1368459724_youtube.png" border="0" width="32" height="32" alt="youtube"></a><a target="_blank" title="Pinterest" href="#"><img src="http://pizzaparadisoorlando.com/wp-content/uploads/1385260771_1384466513_pinterest_social_circle.png" border="0" width="32" height="32" alt="Pinterest"></a>
+ </li>
+             </ul>
+
+
+         </div> 	&lt;!&ndash; end .container &ndash;&gt;
+ </div>
+             </div>-->
+	</footer>
+
+
+
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
